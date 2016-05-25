@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/lookViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/lookshopcar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="80dp"
+                android:src="@mipmap/goushop2" />
+
+            <ImageView
+                android:id="@+id/lookgoback"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/goback2" />
+
+            <ImageView
+                android:id="@+id/lookshopmore"
+                android:layout_width="30dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/moreshop2" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lookLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/lookViewPager"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lookshopName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="name"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/linecolor" />
+
+                <LinearLayout
+                    android:id="@+id/fenxiang"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@mipmap/fenxiang" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/looknewPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="新价格"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/lookoldPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:text="老价格" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp"></LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/adress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="40dp"
+                    android:text="卖家承诺72小时内发货"
+                    android:textColor="@android:color/holo_red_dark" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical">
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/floatMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginBottom="40dp"
+            android:layout_marginRight="20dp"
+            android:src="@android:drawable/ic_dialog_email"
+            fab:fab_addButtonColorNormal="#0090C0"
+            fab:fab_addButtonColorPressed="#ffffac"
+            fab:fab_addButtonPlusIconColor="#000000"
+            fab:fab_addButtonSize="mini"
+            fab:fab_addButtonStrokeVisible="false">
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatbtnShopCar"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/shopcart2"
+                fab:fab_colorNormal="#ffffff"
+                fab:fab_colorPressed="#ffffac"
+                fab:fab_title="购物车" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatbtnSave"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/like1"
+                fab:fab_colorNormal="#ffffff"
+                fab:fab_colorPressed="#ffffac"
+                fab:fab_size="mini"
+                fab:fab_title="收藏" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatbtnShop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/goumai"
+                fab:fab_colorNormal="#ffffff"
+                fab:fab_colorPressed="#ffffac"
+                fab:fab_size="mini"
+                fab:fab_title="立即购买" />
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+    </LinearLayout>
+</RelativeLayout>
